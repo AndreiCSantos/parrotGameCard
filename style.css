@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+body 
+{
+  background-color: #eef9bf;
+}
+
+header
+{
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .titulo
+{
+    font-size: 56px;
+    font-weight: 700;
+    color: #75b79e;
+}
+
+main
+{
+    margin-top: 40px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.memory-game 
+{
+  width: 70vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 34px;
+}
+
+.memory-card 
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 117px;
+  height: 146px;
+  transition: transform 0.8s;
+  transform: rotateY(0deg);
+  background-color: #A7E9AF;
+  border: solid 1px #99CEA8;
+  border-radius: 5px;
+}
+
+.memory-card.flip 
+{
+  transform: rotateY(180deg);
+}
+
+.memory-card img 
+{
+  width: 100px;
+  height: 100px;
+}
+
+.memory-card .back-face 
+{
+  transform: rotateY(180deg);
+}
+
+.memory-card .front-face 
+{
+  display: none;
+}
+
+.memory-card.flip .front-face 
+{
+  display: block;
+}
+
+.memory-card.flip .back-face 
+{
+  display: none;
+}
+
+.memory-card .back-face 
+{
+  display: block;
+}
+
+@media (max-width: 614px)
+{
+    header .titulo
+    {
+        font-size: 36px;
+        text-align: center;
+    }
+}
